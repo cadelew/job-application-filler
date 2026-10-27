@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# WXT / build
+.output/
+.wxt/
+dist/
+
+# Personal profiles — never commit
+profile*.json
+*.profile.json
+
+# Test / tooling
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Env / OS
+.env
+.env.*
+.DS_Store
+*.log
+.pnpm-store/
