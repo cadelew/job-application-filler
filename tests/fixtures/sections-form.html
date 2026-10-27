@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sections Form Fixture</title>
+  </head>
+  <body>
+    <h1>Multi-section Application</h1>
+    <form id="app">
+      <fieldset>
+        <legend>Education</legend>
+        <label for="edu_school">School</label>
+        <input id="edu_school" name="edu_school" type="text" />
+        <label for="edu_start">Start Date</label>
+        <input id="edu_start" name="edu_start" type="text" />
+        <label for="edu_end">End Date</label>
+        <input id="edu_end" name="edu_end" type="text" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Experience</legend>
+        <label for="exp_company">Company</label>
+        <input id="exp_company" name="exp_company" type="text" />
+        <label for="exp_start">Start Date</label>
+        <input id="exp_start" name="exp_start" type="text" />
+        <label for="exp_end">End Date</label>
+        <input id="exp_end" name="exp_end" type="text" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Education 2</legend>
+        <label for="edu2_school">School</label>
+        <input id="edu2_school" name="edu2_school" type="text" />
+        <label for="edu2_start">Start Date</label>
+        <input id="edu2_start" name="edu2_start" type="text" />
+      </fieldset>
+
+      <button type="submit" id="submit">Submit</button>
+    </form>
+    <script>
+      window.__submitClicks = 0;
+      document.getElementById('app').addEventListener('submit', (e) => {
+        e.preventDefault();
+        window.__submitClicks += 1;
+      });
+    </script>
+  </body>
+</html>

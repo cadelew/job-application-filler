@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React-like Controlled Form Fixture</title>
+  </head>
+  <body>
+    <h1>Controlled Inputs Application</h1>
+    <div id="root"></div>
+    <script src="./react-bundle.js"></script>
+    <script>
+      window.__submitClicks = 0;
+      const root = MiniReact.createRoot(document.getElementById('root'));
+      const fields = [
+        { id: 'first_name', name: 'first_name', label: 'First Name' },
+        { id: 'last_name', name: 'last_name', label: 'Last Name' },
+        { id: 'email', name: 'email', label: 'Email Address', type: 'email' },
+        { id: 'phone', name: 'phone', label: 'Phone Number', type: 'tel' },
+        { id: 'linkedin', name: 'linkedin', label: 'LinkedIn Profile', type: 'url' },
+        { id: 'github', name: 'github', label: 'GitHub URL', type: 'url' },
+        { id: 'location', name: 'location', label: 'Current Location' },
+        { id: 'school', name: 'school', label: 'University' },
+      ];
+      root.render(() => root.mountForm(fields));
+    </script>
+  </body>
+</html>

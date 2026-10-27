@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ARIA Form Fixture</title>
+  </head>
+  <body>
+    <h1>Accessible Application</h1>
+    <form id="app">
+      <span id="fn-label">Given Name</span>
+      <input aria-labelledby="fn-label" id="fn" name="given_name" type="text" />
+
+      <span id="ln-label">Family Name</span>
+      <input aria-labelledby="ln-label" id="ln" name="family_name" type="text" />
+
+      <input aria-label="Email Address" id="em" name="email" type="email" />
+      <input aria-label="Phone Number" id="ph" name="phone" type="tel" />
+      <input aria-label="LinkedIn Profile URL" id="li" name="linkedin" type="url" />
+      <input placeholder="Current Location" id="loc" name="location" type="text" />
+
+      <button type="submit" id="submit">Submit</button>
+    </form>
+    <script>
+      window.__submitClicks = 0;
+      document.getElementById('app').addEventListener('submit', (e) => {
+        e.preventDefault();
+        window.__submitClicks += 1;
+      });
+    </script>
+  </body>
+</html>

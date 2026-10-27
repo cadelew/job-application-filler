@@ -3,7 +3,11 @@
   "compilerOptions": {
     "allowImportingTsExtensions": true,
     "jsx": "react-jsx",
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals"],
+    "paths": {
+      "@/*": ["./*"],
+      "~/*": ["./*"]
+    }
   },
   "include": [
     ".wxt/wxt.d.ts",

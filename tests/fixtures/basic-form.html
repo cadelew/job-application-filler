@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Basic Form Fixture</title>
+  </head>
+  <body>
+    <h1>Job Application</h1>
+    <form id="app">
+      <div>
+        <label for="first_name">First Name</label>
+        <input id="first_name" name="first_name" type="text" />
+      </div>
+      <div>
+        <label for="last_name">Last Name</label>
+        <input id="last_name" name="last_name" type="text" />
+      </div>
+      <div>
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email" />
+      </div>
+      <div>
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone" type="tel" />
+      </div>
+      <div>
+        <label for="location">Current Location</label>
+        <input id="location" name="location" type="text" />
+      </div>
+      <div>
+        <label for="linkedin">LinkedIn Profile</label>
+        <input id="linkedin" name="linkedin" type="url" />
+      </div>
+      <div>
+        <label for="github">GitHub URL</label>
+        <input id="github" name="github" type="url" />
+      </div>
+      <div>
+        <label for="school">University</label>
+        <input id="school" name="school" type="text" />
+      </div>
+      <div>
+        <label for="state">State</label>
+        <select id="state" name="state">
+          <option value="">Select...</option>
+          <option value="CA">California</option>
+          <option value="NY">New York</option>
+          <option value="England">England</option>
+        </select>
+      </div>
+      <button type="submit" id="submit">Submit Application</button>
+    </form>
+    <script>
+      window.__submitClicks = 0;
+      document.getElementById('app').addEventListener('submit', (e) => {
+        e.preventDefault();
+        window.__submitClicks += 1;
+      });
+      document.getElementById('submit').addEventListener('click', () => {
+        window.__submitClicks += 1;
+      });
+    </script>
+  </body>
+</html>
